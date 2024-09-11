@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --ff-primary: "Plus Jakarta Sans", sans-serif;
+
+    --clr-red: hsl(1, 90%, 64%);
+    --clr-blue: hsl(219, 85%, 26%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-lightGray-blue: hsl(210, 60%, 98%);
+    --clr-lightGray1: hsl(211, 68%, 94%);
+    --clr-lightGray2: hsl(205, 33%, 90%);
+    --clr-gray-blue: hsl(219, 14%, 63%);
+    --clr-darkGray-blue: hsl(219, 12%, 42%);
+    --clr-vd-blue: hsl(224, 21%, 14%);
+
+    --brRadius: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--ff-primary);
+}
+
+body {
+    background-color: var(--clr-lightGray-blue);
+    font-size: 1.5rem;
+}
+
+.notifications {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General styles */
+a {
+    text-decoration: none;
+}
+
+.user_name {
+    color: var(--clr-vd-blue);
+    font-weight: 700;
+}
+
+.user_name:hover {
+    color: var(--clr-blue);
+    cursor: pointer;
+}
+
+.group_name {
+    color: var(--clr-blue);
+    font-weight: 700;
+}
+
+.post_title {
+    color: var(--clr-darkGray-blue);
+    font-weight: 700;
+}
+
+.post_title:hover {
+    color: var(--clr-blue);
+    cursor: pointer;
+}
+
+.notification_sign {
+    display: inline-block;
+    background-color: var(--clr-red);
+    width: .9rem;
+    height: .9rem;
+    border-radius: 100vmax;
+    margin-left: .75rem;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.message {
+    background-color: var(--clr-white);
+    padding: 1.4rem;
+    border-radius: calc(var(--brRadius) * 0.9);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.2rem;
+}
+
+.message:not(:last-child) {
+    margin-bottom: 1.1rem;
+}
+
+.grid-col-3 {
+    grid-template-columns: auto 1fr auto;
+}
+
+.unread {
+    background-color: hsl(210, 60%, 98%);   
+}
+
+.user_img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+}
+
+.comment_img {
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.comment_img:hover {    
+    border-color: var(--clr-lightGray2);
+}
+
+.notifications_wrap {
+    background-color: var(--clr-white);
+    padding: 2.4rem 1.6rem;
+}
+
+.notification_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.notification_title_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.notification_title {
+    color: var(--clr-vd-blue);
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.amount {
+    padding-inline: 1.25rem;
+    padding-top: .15rem;
+    padding-bottom: .45rem;
+    background-color: var(--clr-blue);
+    border-radius: 4px;
+    margin-left: 1rem;
+    color: var(--clr-white);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.action_btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: var(--clr-darkGray-blue);
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.action_btn:hover {
+    color: var(--clr-blue);
+}
+
+.content p {
+    color: var(--clr-darkGray-blue);
+    font-weight: 500;
+}
+
+.message_content {
+    grid-column: 2/-1;
+    border: 1px solid var(--clr-lightGray2);
+    color: var(--clr-darkGray-blue);
+    padding: 1.35rem;
+    border-radius: 5px;
+    margin-top: 1.35rem;
+    font-weight: 500;
+}
+
+.message_content:hover {
+    background-color: #e5eff9;
+    cursor: pointer;
+}
+
+.content p.timestamp {
+    color: var(--clr-gray-blue);
+    margin-top: .25rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .notifications {
+        /* height: 100vh;
+        align-items: center; */
+        margin-top: 5rem;
+    }
+
+    .notifications_wrap {
+        padding: 3.8rem 3rem 1rem 3rem;
+        border-radius: var(--brRadius);
+        box-shadow: 1px 1px 10px hsl(224 21% 14%/.05);
+        width: 90vw;
+        max-width: 73rem;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    body {
+        font-size: 1.6rem;
+    }
+
+    .notifications {
+        height: 100vh;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .user_img,
+    .comment_img {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    .message {
+        column-gap: 1.4rem;
+    }
+
+    .message_content {
+        padding: 1.85rem 1.7rem;
+        border-radius: 5px;
+        margin-top: 1.35rem;
+    }
+}

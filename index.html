@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./main.css">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 1rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="notifications">
+      <div class="notifications_wrap">
+        <!-- Header -->
+        <header class="notification_header">
+          <div class="notification_title_wrap">
+            <h3 class="notification_title">Notifications</h3>
+            <span class="amount" id="amount"></span>
+          </div>
+          <button type="button" class="action_btn" id="actionBtn">Mark all as read</button>
+        </header>
+        <!-- Messages -->
+        <!-- Single message -->
+         <article class="message unread">
+          <img src="./assets/images/avatar-mark-webber.webp" alt="user avatar" class="user_img" />
+          <div class="content">
+            <p>
+              <span class="user_name">Mark Webber</span> reacted to your recent post <a href="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC" class="post_title">My first tournament today!</a><span class="notification_sign"></span>
+            </p>
+            <p class="timestamp">1m ago</p>
+          </div>
+         </article>
+        <!-- Single message -->
+        <article class="message unread">
+          <img src="./assets/images/avatar-angela-gray.webp" alt="user avatar" class="user_img" />
+          <div class="content">
+            <p>
+              <span class="user_name">Angela Gray</span> followed you<span class="notification_sign"></span>
+            </p>
+            <p class="timestamp">5m ago</p>
+          </div>
+        </article>
+        <!-- Single message -->
+        <article class="message unread">
+          <img src="./assets/images/avatar-jacob-thompson.webp" alt="user avatar" class="user_img" />
+          <div class="content">
+            <p>
+              <span class="user_name">Jacob Thompson</span> has joined your group <a href="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC" class="group_name">Chess Club</a><span class="notification_sign"></span>
+            </p>
+            <p class="timestamp">1 day ago</p>
+          </div>
+        </article>
+        <!-- Single message -->
+        <article class="message private_message">
+          <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="user avatar" class="user_img" />
+          <div class="content">
+            <p>
+              <span class="user_name">Rizky Hasanuddin </span> sent you a private message <span class="notification_sign hidden"></span>
+            </p>
+            <p class="timestamp">5 days ago</p>
+          </div>
+          <p class="message_content">Hello, thanks for setting up the Chess Club.   I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+        </article>
+        <!-- Single message -->
+        <article class="message grid-col-3">
+          <img src="./assets/images/avatar-kimberly-smith.webp" alt="user avatar" class="user_img" />
+          <div class="content">
+            <p>
+              <span class="user_name">Kimberly Smith</span> commented on your picture<span class="notification_sign hidden"></span>
+            </p>
+            <p class="timestamp">1 week ago</p>
+          </div>
+          <img src="./assets/images/image-chess.webp" alt="chess group image" class="comment_img" />
+        </article>
+        <!-- Single message -->
+        <article class="message">
+          <img src="./assets/images/avatar-nathan-peterson.webp" alt="user avatar" class="user_img" />
+          <div class="content">
+            <p>
+              <span class="user_name">Nathan Peterson</span> reacted to your recent post <a href="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC" class="post_title">5 end-game strategies to increase your win rate</a><span class="notification_sign hidden"></span>
+            </p>
+            <p class="timestamp">2 weeks ago</p>
+          </div>
+        </article>
+        <!-- Single message -->
+        <article class="message">
+          <img src="./assets/images/avatar-anna-kim.webp" alt="user avatar" class="user_img" />
+          <div class="content">
+            <p>
+              <span class="user_name">Anna Kim</span> left the group <a href="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC" class="group_name">Chess Club</a><span class="notification_sign hidden"></span>
+            </p>
+            <p class="timestamp">2 weeks ago</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">z83studio</a>.
+    </div>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
